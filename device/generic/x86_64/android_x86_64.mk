@@ -32,6 +32,8 @@ $(call inherit-product,build/target/product/languages_full.mk)
 # includes the base of Android-x86 platform
 $(call inherit-product,device/generic/common/x86_64.mk)
 
+$(call inherit-product,vendor/opengapps/build/opengapps-packages.mk)
+
 # Overrides
 PRODUCT_NAME := android_x86_64
 PRODUCT_BRAND := Android-x86
