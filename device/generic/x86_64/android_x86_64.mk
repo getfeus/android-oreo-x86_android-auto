@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += GooglePlus
 PRODUCT_PACKAGES += Hangouts
 PRODUCT_PACKAGES += Japanese
 PRODUCT_PACKAGES += Korean
+GAPPS_EXCLUDED_PACKAGES := PrebuiltGmsCoreInstantApps
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.kernel.android.gps=ttyUSB0 \
@@ -30,8 +31,6 @@ $(call inherit-product,build/target/product/languages_full.mk)
 
 # includes the base of Android-x86 platform
 $(call inherit-product,device/generic/common/x86_64.mk)
-
-$(call inherit-product,vendor/opengapps/build/opengapps-packages.mk)
 
 # Overrides
 PRODUCT_NAME := android_x86_64
